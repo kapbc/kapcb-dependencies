@@ -35,8 +35,7 @@
         </spring-cloud-alibaba-dependencies.version>
         <spring-cloud-starter-openfeign.version>${spring-cloud.version}</spring-cloud-starter-openfeign.version>
         <spring-cloud-starter-loadbalancer.version>${spring-cloud.version}</spring-cloud-starter-loadbalancer.version>
-        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}
-        </spring-cloud-starter-netflix-hystrix.version>
+        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}</spring-cloud-starter-netflix-hystrix.version>
         <spring-cloud-starter-gateway.verion>${spring-cloud.version}</spring-cloud-starter-gateway.verion>
         <spring-cloud-stream-binder-rabbit.version>3.0.12.RELEASE</spring-cloud-stream-binder-rabbit.version>
         <spring-cloud-stream-binder-kafka.version>3.0.12.RELEASE</spring-cloud-stream-binder-kafka.version>
@@ -83,6 +82,7 @@
         <elasticsearch-rest-high-level-client.version>7.13.2</elasticsearch-rest-high-level-client.version>
         <redisson.version>3.15.6</redisson.version>
         <logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
+        <easy-captcha.version>1.6.2</easy-captcha.version>
         <!-- commons end -->
     </properties>
     <!-- version control end -->
@@ -326,6 +326,11 @@
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
                 <version>${logstash-logback-encoder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${easy-captcha.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
