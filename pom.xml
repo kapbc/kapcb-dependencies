@@ -35,7 +35,8 @@
         </spring-cloud-alibaba-dependencies.version>
         <spring-cloud-starter-openfeign.version>${spring-cloud.version}</spring-cloud-starter-openfeign.version>
         <spring-cloud-starter-loadbalancer.version>${spring-cloud.version}</spring-cloud-starter-loadbalancer.version>
-        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}</spring-cloud-starter-netflix-hystrix.version>
+        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}
+        </spring-cloud-starter-netflix-hystrix.version>
         <spring-cloud-starter-gateway.verion>${spring-cloud.version}</spring-cloud-starter-gateway.verion>
         <spring-cloud-stream-binder-rabbit.version>3.0.12.RELEASE</spring-cloud-stream-binder-rabbit.version>
         <spring-cloud-stream-binder-kafka.version>3.0.12.RELEASE</spring-cloud-stream-binder-kafka.version>
@@ -62,6 +63,8 @@
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <!-- java end -->
         <!-- mysql start -->
+        <sharding-transaction.version>4.1.1</sharding-transaction.version>
+        <seata-spring-boot-starter.version>1.4.2</seata-spring-boot-starter.version>
         <mysql-connector-java.version>8.0.24</mysql-connector-java.version>
         <mybatis-plus-boot-starter.version>3.4.3</mybatis-plus-boot-starter.version>
         <dynamic-datasource-spring-boot-starter.version>3.3.2</dynamic-datasource-spring-boot-starter.version>
@@ -237,6 +240,30 @@
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
                 <version>${dynamic-datasource-spring-boot-starter.version}</version>
             </dependency>
+            <!-- sharding jdbc core -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-core</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- sharding jdbc spring boot starter -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- sharding transaction base seata at -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-transaction-base-seata-at</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- seata spring boot starter -->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata-spring-boot-starter.version}</version>
+            </dependency>
             <!-- commons pool2 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -327,6 +354,7 @@
                 <artifactId>logstash-logback-encoder</artifactId>
                 <version>${logstash-logback-encoder.version}</version>
             </dependency>
+            <!-- easy captcha -->
             <dependency>
                 <groupId>com.github.whvcse</groupId>
                 <artifactId>easy-captcha</artifactId>
