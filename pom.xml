@@ -12,14 +12,14 @@
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>2.3.11.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
         <relativePath/>
     </parent>
 
     <!-- version control start -->
     <properties>
         <!-- base start -->
-        <java.version>1.8</java.version>
+        <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -78,6 +78,12 @@
         <orika-core.version>1.5.4</orika-core.version>
         <xxl-job-core.version>2.3.0</xxl-job-core.version>
         <vavr.version>1.0.0-alpha-3</vavr.version>
+        <vavr-jackson.version>1.0.0-alpha-3</vavr-jackson.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <pinyin4j.version>2.5.1</pinyin4j.version>
+        <mapstruct.version>1.5.0.Beta1</mapstruct.version>
+        <mapstruct-processor.version>1.5.0.Beta1</mapstruct-processor.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.10.10</joda-time.version>
         <guava.version>19.0</guava.version>
         <easyexcel.version>2.2.8</easyexcel.version>
@@ -312,6 +318,40 @@
                 <artifactId>vavr</artifactId>
                 <version>${vavr.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.vavr</groupId>
+                <artifactId>vavr-jackson</artifactId>
+                <version>${vavr-jackson.version}</version>
+            </dependency>
+            <!-- dom4j -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+            <!-- pinyin4j -->
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.version}</version>
+            </dependency>
+            <!-- mapstruct -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct-processor.version}</version>
+            </dependency>
+            <!-- jwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
             <!-- joda time formatter -->
             <dependency>
                 <groupId>joda-time</groupId>
@@ -400,10 +440,6 @@
         <dependency>
             <groupId>io.vavr</groupId>
             <artifactId>vavr</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>joda-time</groupId>
