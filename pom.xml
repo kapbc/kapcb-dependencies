@@ -12,14 +12,14 @@
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>2.3.11.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
         <relativePath/>
     </parent>
 
     <!-- version control start -->
     <properties>
         <!-- base start -->
-        <java.version>1.8</java.version>
+        <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -63,6 +63,8 @@
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <!-- java end -->
         <!-- mysql start -->
+        <sharding-transaction.version>4.1.1</sharding-transaction.version>
+        <seata-spring-boot-starter.version>1.4.2</seata-spring-boot-starter.version>
         <mysql-connector-java.version>8.0.24</mysql-connector-java.version>
         <mybatis-plus-boot-starter.version>3.4.3</mybatis-plus-boot-starter.version>
         <dynamic-datasource-spring-boot-starter.version>3.3.2</dynamic-datasource-spring-boot-starter.version>
@@ -76,13 +78,20 @@
         <orika-core.version>1.5.4</orika-core.version>
         <xxl-job-core.version>2.3.0</xxl-job-core.version>
         <vavr.version>1.0.0-alpha-3</vavr.version>
+        <vavr-jackson.version>1.0.0-alpha-3</vavr-jackson.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <pinyin4j.version>2.5.1</pinyin4j.version>
+        <mapstruct.version>1.5.0.Beta1</mapstruct.version>
+        <mapstruct-processor.version>1.5.0.Beta1</mapstruct-processor.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.10.10</joda-time.version>
-        <guava.version>19.0</guava.version>
+        <guava.version>25.1-jre</guava.version>
         <easyexcel.version>2.2.8</easyexcel.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <elasticsearch-rest-high-level-client.version>7.13.2</elasticsearch-rest-high-level-client.version>
         <redisson.version>3.15.6</redisson.version>
         <logstash-logback-encoder.version>6.6</logstash-logback-encoder.version>
+        <easy-captcha.version>1.6.2</easy-captcha.version>
         <!-- commons end -->
     </properties>
     <!-- version control end -->
@@ -237,6 +246,30 @@
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
                 <version>${dynamic-datasource-spring-boot-starter.version}</version>
             </dependency>
+            <!-- sharding jdbc core -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-core</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- sharding jdbc spring boot starter -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- sharding transaction base seata at -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-transaction-base-seata-at</artifactId>
+                <version>${sharding-transaction.version}</version>
+            </dependency>
+            <!-- seata spring boot starter -->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata-spring-boot-starter.version}</version>
+            </dependency>
             <!-- commons pool2 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -285,6 +318,40 @@
                 <artifactId>vavr</artifactId>
                 <version>${vavr.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.vavr</groupId>
+                <artifactId>vavr-jackson</artifactId>
+                <version>${vavr-jackson.version}</version>
+            </dependency>
+            <!-- dom4j -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+            <!-- pinyin4j -->
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.version}</version>
+            </dependency>
+            <!-- mapstruct -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct-processor.version}</version>
+            </dependency>
+            <!-- jwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
             <!-- joda time formatter -->
             <dependency>
                 <groupId>joda-time</groupId>
@@ -327,6 +394,12 @@
                 <artifactId>logstash-logback-encoder</artifactId>
                 <version>${logstash-logback-encoder.version}</version>
             </dependency>
+            <!-- easy captcha -->
+            <dependency>
+                <groupId>com.github.whvcse</groupId>
+                <artifactId>easy-captcha</artifactId>
+                <version>${easy-captcha.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -367,10 +440,6 @@
         <dependency>
             <groupId>io.vavr</groupId>
             <artifactId>vavr</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>joda-time</groupId>
