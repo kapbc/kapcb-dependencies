@@ -68,6 +68,8 @@
         <mysql-connector-java.version>8.0.24</mysql-connector-java.version>
         <mybatis-plus-boot-starter.version>3.4.3</mybatis-plus-boot-starter.version>
         <dynamic-datasource-spring-boot-starter.version>3.3.2</dynamic-datasource-spring-boot-starter.version>
+        <fluent-mybatis.version>1.9.0</fluent-mybatis.version>
+        <fluent-mybatis-processor.version>1.9.0</fluent-mybatis-processor.version>
         <!-- mysql end -->
         <!-- commons start -->
         <commons-pool2.version>2.9.0</commons-pool2.version>
@@ -249,6 +251,19 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
                 <version>${dynamic-datasource-spring-boot-starter.version}</version>
+            </dependency>
+            <!-- fluent mybatis 运行依赖包, scope为compile -->
+            <dependency>
+                <groupId>com.github.atool</groupId>
+                <artifactId>fluent-mybatis</artifactId>
+                <version>${fluent-mybatis.version}</version>
+            </dependency>
+            <!-- fluent mybatis processor scope设置为 provider 编译需要，运行时不需要 -->
+            <dependency>
+                <groupId>com.github.atool</groupId>
+                <artifactId>fluent-mybatis-processor</artifactId>
+                <scope>provided</scope>
+                <version>${fluent-mybatis-processor.version}</version>
             </dependency>
             <!-- sharding jdbc core -->
             <dependency>
