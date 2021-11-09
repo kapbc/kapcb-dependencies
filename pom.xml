@@ -70,6 +70,7 @@
         <dynamic-datasource-spring-boot-starter.version>3.3.2</dynamic-datasource-spring-boot-starter.version>
         <fluent-mybatis.version>1.9.0</fluent-mybatis.version>
         <fluent-mybatis-processor.version>1.9.0</fluent-mybatis-processor.version>
+        <bean-searcher.version>2.2.0</bean-searcher.version>
         <!-- mysql end -->
         <!-- commons start -->
         <commons-pool2.version>2.9.0</commons-pool2.version>
@@ -264,6 +265,11 @@
                 <artifactId>fluent-mybatis-processor</artifactId>
                 <scope>provided</scope>
                 <version>${fluent-mybatis-processor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ejlchina</groupId>
+                <artifactId>bean-searcher</artifactId>
+                <version>${bean-searcher.version}</version>
             </dependency>
             <!-- sharding jdbc core -->
             <dependency>
