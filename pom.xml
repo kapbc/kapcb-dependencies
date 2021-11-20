@@ -31,10 +31,12 @@
         <!-- base end -->
         <!-- spring cloud start -->
         <spring-cloud-dependencies.version>Hoxton.SR11</spring-cloud-dependencies.version>
-        <spring-cloud-alibaba-dependencies.version>${spring-cloud-alibaba.version}</spring-cloud-alibaba-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>${spring-cloud-alibaba.version}
+        </spring-cloud-alibaba-dependencies.version>
         <spring-cloud-starter-openfeign.version>${spring-cloud.version}</spring-cloud-starter-openfeign.version>
         <spring-cloud-starter-loadbalancer.version>${spring-cloud.version}</spring-cloud-starter-loadbalancer.version>
-        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}</spring-cloud-starter-netflix-hystrix.version>
+        <spring-cloud-starter-netflix-hystrix.version>${spring-cloud.version}
+        </spring-cloud-starter-netflix-hystrix.version>
         <spring-cloud-starter-gateway.verion>${spring-cloud.version}</spring-cloud-starter-gateway.verion>
         <spring-cloud-stream-binder-rabbit.version>3.0.12.RELEASE</spring-cloud-stream-binder-rabbit.version>
         <spring-cloud-stream-binder-kafka.version>3.0.12.RELEASE</spring-cloud-stream-binder-kafka.version>
@@ -42,7 +44,8 @@
         <!-- spring cloud end -->
         <!-- spring boot start -->
         <spring-boot-autoconfigure.version>${spring-boot.version}</spring-boot-autoconfigure.version>
-        <spring-boot-configuration-processor.version>${spring-boot.version}</spring-boot-configuration-processor.version>
+        <spring-boot-configuration-processor.version>${spring-boot.version}
+        </spring-boot-configuration-processor.version>
         <spring-boot-starter-jdbc.version>${spring-boot.version}</spring-boot-starter-jdbc.version>
         <spring-boot-starter-jdbc.version>${spring-boot.version}</spring-boot-starter-jdbc.version>
         <spring-boot-starter-data-redis.version>${spring-boot.version}</spring-boot-starter-data-redis.version>
@@ -83,6 +86,7 @@
         <pinyin4j.version>2.5.1</pinyin4j.version>
         <mapstruct.version>1.5.0.Beta1</mapstruct.version>
         <mapstruct-processor.version>1.5.0.Beta1</mapstruct-processor.version>
+        <dozer.version>5.5.1</dozer.version>
         <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.10.10</joda-time.version>
         <guava.version>25.1-jre</guava.version>
@@ -367,6 +371,12 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct-processor.version}</version>
+            </dependency>
+            <!-- dozer -->
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer</artifactId>
+                <version>${dozer.version}</version>
             </dependency>
             <!-- jwt -->
             <dependency>
