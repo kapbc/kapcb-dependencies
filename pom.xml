@@ -87,6 +87,8 @@
         <mapstruct.version>1.5.0.Beta1</mapstruct.version>
         <mapstruct-processor.version>1.5.0.Beta1</mapstruct-processor.version>
         <dozer.version>5.5.1</dozer.version>
+        <dozer-spring.version>5.5.1</dozer-spring.version>
+        <zxing.core.version>3.2.1</zxing.core.version>
         <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.10.10</joda-time.version>
         <guava.version>25.1-jre</guava.version>
@@ -206,6 +208,7 @@
                 <artifactId>spring-boot-starter-websocket</artifactId>
                 <version>${spring-boot-starter-websocket.version}</version>
             </dependency>
+            <!-- spring boot webflux -->
             <!-- spring boot webflux -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -377,6 +380,17 @@
                 <groupId>net.sf.dozer</groupId>
                 <artifactId>dozer</artifactId>
                 <version>${dozer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer-spring</artifactId>
+                <version>${dozer-spring.version}</version>
+            </dependency>
+            <!-- zxing core -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${zxing.core.version}</version>
             </dependency>
             <!-- jwt -->
             <dependency>
