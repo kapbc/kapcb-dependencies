@@ -92,6 +92,7 @@
         <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.10.10</joda-time.version>
         <guava.version>25.1-jre</guava.version>
+        <aspectjweaver.version>1.9.6</aspectjweaver.version>
         <easyexcel.version>2.2.8</easyexcel.version>
         <slf4j-api.version>1.7.30</slf4j-api.version>
         <elasticsearch-rest-high-level-client.version>7.13.2</elasticsearch-rest-high-level-client.version>
@@ -409,6 +410,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <!-- aspectjweaver -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
             </dependency>
             <!-- easyexcel -->
             <dependency>
